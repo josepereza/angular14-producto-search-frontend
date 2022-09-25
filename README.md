@@ -1,4 +1,6 @@
 # Producto
+## backend:
+* https://github.com/josepereza/nodejs-ts-prisma-producto-backend
 ![images](producto.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
