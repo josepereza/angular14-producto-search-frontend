@@ -1,0 +1,30 @@
+<div class="container">
+    <form  [formGroup]="productoForm" (ngSubmit)="addProduct()"> 
+        <fieldset>
+          <legend>{{operacion}}</legend>
+         
+          <div class="form-group">
+            <label for="name" class="form-label mt-4">Name</label>
+            <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+            <small id="nameHelp" class="form-text text-muted">Nombre del producto</small>
+          </div>
+          <div class="form-group">
+            <label for="price" class="form-label mt-4">Price</label>
+            <input type="number" formControlName="price" class="form-control" id="price" aria-describedby="priceHelp" placeholder="Enter Price">
+            <small id="PriceHelp" class="form-text text-muted">00.00</small>
+          </div>
+          <div class="form-group">
+            <label for="description" class="form-label mt-4">Description</label>
+            <input type="text" formControlName="description" class="form-control" id="description" a placeholder="Enter Description">
+            
+          </div>
+          <div class="form-group">
+            <label for="stock" class="form-label mt-4">Stock</label>
+            <input type="number" formControlName="stock" class="form-control" id="stock" aria-describedby="stockHelp" placeholder="Enter email">
+            <small id="stockHelp" class="form-text text-muted">00</small>
+          </div>
+          
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+</div>

@@ -1,0 +1,35 @@
+<div class="titulo">
+<h2>Listado Productos</h2>
+<button  routerLink="/add-edit"   type="button" class="btn btn-primary">Agregar Producto</button> 
+
+</div>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Acction</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos"  class="table-primary">
+        <th scope="row">{{producto.id}}</th>
+        <td>{{producto.name}}</td>
+        <td>{{producto.price}}</td>
+        <td>{{producto.description}}</td>
+        <td>{{producto.stock}}</td>
+
+        <td>
+            <button (click)="edit(producto.id!)" type="button" class="btn btn-success">Edit</button>
+        <button (click)="del(producto.id!)" type="button" class="btn btn-warning">Delete</button> 
+        </td>
+       
+      </tr>
+     
+    </tbody>
+  </table>
